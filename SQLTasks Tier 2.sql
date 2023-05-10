@@ -104,7 +104,7 @@ WHERE DATE(b.starttime) = "2012-09-14"
 ORDER BY cost DESC;
 
 /* Q9: This time, produce the same result as in Q8, but using a subquery. */
-
+??? I need help on this but the Tier1 posted online is the exact same as Tier 2.
 
 /* PART 2: SQLite
 
@@ -115,6 +115,7 @@ QUESTIONS:
 /* Q10: Produce a list of facilities with a total revenue less than 1000.
 The output of facility name and total revenue, sorted by revenue. Remember
 that there's a different cost for guests and members! */
+??? I need help on this but the Tier1 posted online is the exact same as Tier 2.
 
 /* Q11: Produce a report of members and who recommended them in alphabetic surname,firstname order */
 query = '''SELECT m1.surname, m1.firstname FROM Members AS m1 WHERE m1.surname <> "GUEST" AND m1.recommendedby IS NOT NULL ORDER BY m1.surname, m1.firstname'''
