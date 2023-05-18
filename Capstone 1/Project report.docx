@@ -1,0 +1,33 @@
+Problem Statement
+Big Mountain Resort is a ski resort located in Whitefish, Montana offering views of Glacier National Park and Flathead National Forest, with access to 105 trails.  They have added an additional chair which increased their operating costs by $1,540,000 this season.  Blue Mountain needs to either cut costs or support a higher ticket price.  What opportunities exist for Big Mountain Resort to offset their increased operational cost. 
+
+Goal
+Create a new data-based pricing strategy for Big Mountain Resort to offset the increase of 1,540,000 by either cutting costs or increasing ticket price.  The current ticket price for Blue Mountain resort is at $81 which is already at the upper end of the ticket prices in Montana.  The goal is to stay competitive and not lose customers.
+
+Method
+Initially the data we found was how populous the state is, how many resorts are in each state and the popularity of the resorts in that state. Colorado seems to have a name for skiing; it's in the top five for resorts and in top place for total skiable area. The pattern of the relationship between state and ticket price is that the high price for some resorts when resorts are rare (relative to the population size) may indicate areas where a small number of resorts can benefit from a monopoly effect. The lower ticket price when fewer resorts serve a population may similarly be because it's a less popular state for skiing. Correlation between the ratio of night skiing area with the number of resorts per capital and As well as Runs, total_chairs is quite well correlated with ticket price. It seems that the more chairs a resort has to move people around, relative to the number of runs, ticket price rapidly plummets and stays low. Although with fewer chairs you're inevitably going to be able to serve fewer visitors.
+
+So upon further review of the data we found a few reasonable correlations. fastQuads stands out, along with Runs and Snow Making_ac. The last one is interesting. Visitors would seem to value more guaranteed snow, which would cost in terms of snow making equipment, which would drive prices and costs up. Of the new features, resort_night_skiing_state_ratio seems the most correlated with ticket price.  Also the Runs, total_chairs are quite well correlated with ticket price.  Lastly, the vertical drop seems to be a selling point that raises ticket prices as well.
+
+
+
+Then using the regression model 
+vertical_drop        10.767857
+Snow Making_ac        6.290074
+total_chairs          5.794156
+fastQuads             5.745626
+Runs                  5.370555
+LongestRun_mi         0.181814
+trams                -4.142024
+SkiableTerrain_ac    -5.249780
+dtype: float64
+
+These results suggest that vertical drop is the biggest positive feature.   Also, you see the area covered by snow making equipment is a strong positive as well.  People like guaranteed skiing!   From our analysis Big Mountain is doing well for vertical drop, but there are still quite a few resorts with a greater drop.  Currently Big Mountain is very high up the league table of snow making area as well.  In addition, Big Mountain has 3 fast quads, which puts it high up that league table.  
+
+In addition, while creating the price model, the data suggested that Big Mountain Resort could save more on operations costs by closing a certain number of runs each day. As seen by this chart:
+ 
+
+From this data if Big Mountain closes down 3 runs, it seems they may as well close down 4 or 5 as there's no further loss in ticket price. 
+
+Conclusion
+According to the results, Big Mountain Resort modelled price is $95.87, actual price is $81.00.  Even with the expected mean absolute error of $10.39, this suggests there is room for an increase.   Even a $2 increase in ticket price, which given Big Mountain’s 350,000 annual visitors would result in approximately $700,000 in additional revenue.
