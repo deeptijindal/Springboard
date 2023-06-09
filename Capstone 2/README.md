@@ -2,7 +2,7 @@
 
 Exploratory data analysis and price prediction on the King County (WA) house price data set using attributes or features such as square footage, number of bedrooms, number of floors and so on.
 
-## Package required
+## Packages Required
 common packages: pandas, numpy, seaborn, statsmodels.api, sklearn, matplotlib
 
 folium for the geo heat map. Installation pip install folium
@@ -31,3 +31,6 @@ Along with house price (target) it consists of an ID, date, and 17 house feature
 17. Long: Longitude
 18. Sqft_living15: The square footage of interior housing living space for the nearest 15 neighbors
 19. Sqft_lot15: The square footage of the land lots of the nearest 15 neighbors
+
+## Future Work
+As a recommendation for future work, it will be great to include the identifying characteristics such as amenities (swimming pool, gym room, etc), neighboring education facilities (reputable school and universities), and nearest distance to public transportation. These characteristics will help to determine the house price. Based on the characteristics, we could further segmentize the house into two categories, luxury house or ordinary house. A different model can be developed based on the house category.
