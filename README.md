@@ -1,4 +1,8 @@
-# Springboard
+# Springboard Repository
+Intensive course in Python, SQL, data wrangling, data visualization, hypothesis testing, and machine learning.
+
+Includes projects and case studies from the Advanced Machine Learning specialization track, which covers Natural Language Processing (NLP), Image processingm Advanced time series analysis, Deep Learning, common Neural Network architectures, and deploying machine learning models.
+
 ## Libraries
 NumPy, Pandas, Matplotlib, seaborn, scikit-learn, json
 ## Projects involved
