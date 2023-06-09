@@ -10,6 +10,6 @@ NumPy, Pandas, Matplotlib, seaborn, scikit-learn, json
 
 **SQL Country Club case study** - Used SQL intermediate concepts like joins, case statements, sub queries, windows functions etc. to solve different questions asked as a part of the project.
 
-**Capstone 2 **- Analyse and predict housing prices using attributes or features such as square footage, number of bedrooms, number of floors by cleaning data and performing linear regression models.
+**Capstone 2** - Analyse and predict housing prices using attributes or features such as square footage, number of bedrooms, number of floors by cleaning data and performing linear regression models.
 
 **Frequentist Case Study** - Apply the concepts associated with Frequentist inference in Python. Frequentist inference is the process of deriving conclusions about an underlying distribution via the observation of data and has concepts like Central Limit theorem, bootstrapping and Hypothesis testing.
