@@ -102,32 +102,7 @@ FROM (SELECT m.firstname, m.surname, b.starttime, f.name, CASE WHEN b.memid = 0 
 WHERE DATE(starttime) = "2012-09-14" AND cost >30
 ORDER BY cost DESC;
 
-/* PART 2: SQLite
-
-Export the country club data from PHPMyAdmin, and connect to a local SQLite instance from Jupyter notebook 
-for the following questions.  
-
-QUESTIONS:
-/* Q10: Produce a list of facilities with a total revenue less than 1000.
-The output of facility name and total revenue, sorted by revenue. Remember
-that there's a different cost for guests and members! */
-query = '''SELECT name, revenue FROM (SELECT name, SUM(CASE WHEN memid = 0 THEN guestcost * slots ELSE membercost * slots END) AS revenue
-FROM bookings INNER JOIN facilities ON bookings.facid = facilities.facid GROUP BY name) AS inner_table WHERE revenue < 1000 ORDER BY revenue'''
-df = pd.read_sql_query(query, connection)
-print(df)
-
-/* Q11: Produce a report of members and who recommended them in alphabetic surname,firstname order */
-query = '''SELECT m1.firstname || ' ' || m1.surname AS member, recommended.firstname || ' ' || recommended.surname AS 'recommended by' FROM Members AS m1 INNER JOIN Members recommended On recommended.recommendedby = m1.memid WHERE m1.surname <> "GUEST" AND m1.recommendedby IS NOT NULL ORDER BY m1.surname, m1.firstname'''
-
-/* Q12: Find the facilities with their usage by member, but not guests */
-query = '''SELECT DISTINCT f.name, m.firstname || ' ' || m.surname AS member FROM Facilities AS f 
-INNER JOIN Bookings b ON b.memid = m.memid
-INNER JOIN Members m ON f.facid = b.facid
-WHERE b.memid <> 0 ORDER BY f.name'''
-df = pd.read_sql_query(query, connection)
-print(df)
-
-/* Q13: Find the facilities usage by MONTH, but not guests */
+/* Q10: Find the facilities usage by MONTH, but not guests */
 SELECT f.name,CONCAT(m.firstname,' ',m.surname) AS Member,
 COUNT(f.name) AS bookings,
 	SUM(CASE WHEN MONTH(starttime) = 1 THEN 1 ELSE 0 end) AS Jan,
