@@ -1,4 +1,4 @@
-PART 1: PHPMyAdmin
+/* PART 1: PHPMyAdmin
 You will complete questions 1-9 below in the PHPMyAdmin interface. 
 Log in by pASting the following URL into your browser, and
 using the following Username and PASsword:
@@ -19,7 +19,7 @@ Before starting with the questions, feel free to take your time,
 exploring the data, and getting acquainted with the 3 tables. */
 
 
-/* QUESTIONS 
+/* QUESTIONS */
 /* Q1: Some of the facilities charge a fee to members, but some do not.
 Write a SQL query to produce a list of the names of the facilities that do. */
 
