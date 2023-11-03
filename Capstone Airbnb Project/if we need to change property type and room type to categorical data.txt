@@ -1,0 +1,8 @@
+# fix property and room type from an object to categorical data
+# Parse data which should be categorical data
+cols_categorical = ['property_type', 'room_type']
+for col in cols_categorical:
+    le = preprocessing.LabelEncoder()
+    data_selected_cols[col] = data_selected_cols[col].astype(str)
+    le.fit(data_selected_cols[col])
+    data_selected_cols[col] = le.transform(data_selected_cols[col])
